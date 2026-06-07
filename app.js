@@ -1,6 +1,7 @@
 const vaccines = [
   {
     name: "אבעבועות שחורות",
+    page: "smallpox.html",
     category: ["נגיפי", "היסטורי"],
     year: "1796",
     type: "חיסון חי היסטורי על בסיס Vaccinia",
@@ -11,6 +12,7 @@ const vaccines = [
   },
   {
     name: "כלבת",
+    page: "rabies.html",
     category: ["נגיפי", "היסטורי"],
     year: "1885",
     type: "חיסון מוחלש/היסטורי",
@@ -21,6 +23,7 @@ const vaccines = [
   },
   {
     name: "דיפתריה",
+    page: "diphtheria.html",
     category: ["חיידקי", "היסטורי"],
     year: "1920s",
     type: "טוקסואיד",
@@ -31,6 +34,7 @@ const vaccines = [
   },
   {
     name: "טטנוס",
+    page: "tetanus.html",
     category: ["חיידקי"],
     year: "1920s",
     type: "טוקסואיד",
@@ -41,6 +45,7 @@ const vaccines = [
   },
   {
     name: "פוליו",
+    page: "polio.html",
     category: ["נגיפי", "היסטורי"],
     year: "1950s",
     type: "מומת / חי מוחלש",
@@ -51,6 +56,7 @@ const vaccines = [
   },
   {
     name: "חצבת",
+    page: "measles.html",
     category: ["נגיפי"],
     year: "1963",
     type: "חי מוחלש",
@@ -61,6 +67,7 @@ const vaccines = [
   },
   {
     name: "הפטיטיס B",
+    page: "hepatitis-b.html",
     category: ["נגיפי", "מודרני"],
     year: "1980s",
     type: "רקומביננטי",
@@ -71,6 +78,7 @@ const vaccines = [
   },
   {
     name: "HPV",
+    page: "hpv.html",
     category: ["נגיפי", "מודרני"],
     year: "2006",
     type: "חלקיקים דמויי נגיף",
@@ -81,6 +89,7 @@ const vaccines = [
   },
   {
     name: "COVID-19 mRNA",
+    page: "mrna.html",
     category: ["נגיפי", "מודרני"],
     year: "2020",
     type: "mRNA",
@@ -121,21 +130,16 @@ function renderTimeline() {
 }
 
 function renderCards(filter = "all") {
-  const filtered = filter === "all"
-    ? vaccines
-    : vaccines.filter(v => v.category.includes(filter));
+  const filtered = filter === "all" ? vaccines : vaccines.filter(v => v.category.includes(filter));
 
-  cardsEl.innerHTML = filtered.map((v, index) => `
+  cardsEl.innerHTML = filtered.map(v => `
     <article class="card" data-index="${vaccines.indexOf(v)}">
       <span class="badge">${v.type}</span>
       <div>
         <h3>${v.name}</h3>
         <p>${v.summary}</p>
       </div>
-      <div class="meta">
-        <span>${v.year}</span>
-        <span>${v.key}</span>
-      </div>
+      <div class="meta"><span>${v.year}</span><span>${v.key}</span></div>
     </article>
   `).join("");
 
@@ -158,6 +162,7 @@ function openVaccine(index) {
     </div>
     <h3>רקע מורחב</h3>
     <p>${v.details}</p>
+    <a class="button primary read-more" href="${v.page}">פתח דף מחקר מלא</a>
   `;
   modal.classList.add("show");
 }
@@ -171,9 +176,7 @@ document.querySelectorAll(".chip").forEach(chip => {
 });
 
 closeModal.addEventListener("click", () => modal.classList.remove("show"));
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.classList.remove("show");
-});
+modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("show"); });
 
 renderTimeline();
 renderCards();
