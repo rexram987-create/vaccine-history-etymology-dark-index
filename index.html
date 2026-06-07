@@ -14,6 +14,7 @@
         <a href="#timeline">ציר זמן</a>
         <a href="#index">אינדקס</a>
         <a href="#research-pages">דפי מחקר</a>
+        <a href="people.html">אישים</a>
         <a href="#etymology">אטימולוגיה</a>
         <a href="#sources">מקורות</a>
       </div>
@@ -29,7 +30,7 @@
       </p>
       <div class="hero-actions">
         <a class="button primary" href="#research-pages">פתח דפי מחקר מורחבים</a>
-        <a class="button secondary" href="#index">עבור לאינדקס</a>
+        <a class="button secondary" href="people.html">פתח דף אישים מרכזיים</a>
       </div>
     </section>
   </header>
@@ -38,12 +39,13 @@
     <section class="panel intro">
       <h2>מה חדש בגרסה המורחבת?</h2>
       <p>
-        נוסף אזור גלוי של דפי מחקר מורחבים. בכל דף יש כרטיס מחקר מהיר,
-        רקע רפואי, הסבר היסטורי, אטימולוגיה, חשיבות ציבורית ורעיונות להצגה חזותית באתר.
+        נוסף ציר זמן עם ההבחנה החשובה: ג׳נר נחשב לאבי החיסון המודרני,
+        פסטר לא המציא את החיסון אך הפך אותו לשיטה מעבדתית,
+        ואלבר קלמט פיתח נסיוב נגד ארס נחשים במסגרת עולם הנסיובים.
       </p>
       <div class="stats">
         <div><strong>9</strong><span>דפי מחקר נפרדים</span></div>
-        <div><strong>מורחב</strong><span>רקע רפואי, היסטורי ואטימולוגי</span></div>
+        <div><strong>3</strong><span>אישים מרכזיים עם אטימולוגיה</span></div>
         <div><strong>RTL</strong><span>מותאם לעברית ולנייד</span></div>
       </div>
     </section>
@@ -82,6 +84,7 @@
       </div>
 
       <div class="research-grid">
+        <a class="research-link highlight-link" href="people.html"><strong>אישים מרכזיים</strong><span>אדוארד ג׳נר, לואי פסטר ואלבר קלמט: שנות חיים, מקומות לידה ופטירה, תרומה היסטורית ואטימולוגיה מפורקת.</span></a>
         <a class="research-link" href="smallpox.html"><strong>אבעבועות שחורות</strong><span>ג׳נר, וריאולציה, מקור המילה Vaccine והכחדה עולמית.</span></a>
         <a class="research-link" href="rabies.html"><strong>כלבת</strong><span>פסטר, מניעה לאחר חשיפה והקשר בין רפואה לבעלי חיים.</span></a>
         <a class="research-link" href="polio.html"><strong>פוליו</strong><span>סאלק, סייבין, חיסון מומת מול חי מוחלש ומבצעי חיסון.</span></a>
@@ -109,14 +112,8 @@
     </section>
 
     <section id="modal-info" class="panel">
-      <div class="section-title">
-        <p class="eyebrow">Interactive</p>
-        <h2>איך משתמשים באתר?</h2>
-      </div>
-      <p>
-        לחץ על כרטיס חיסון כדי לפתוח חלון צף עם מידע מורחב.
-        בתוך החלון מופיע כפתור ברור: “פתח דף מחקר מלא”.
-      </p>
+      <div class="section-title"><p class="eyebrow">Interactive</p><h2>איך משתמשים באתר?</h2></div>
+      <p>לחץ על כרטיס חיסון כדי לפתוח חלון צף עם מידע מורחב. בתוך החלון מופיע כפתור ברור: “פתח דף מחקר מלא”.</p>
     </section>
 
     <section id="sources" class="panel sources">
@@ -132,17 +129,8 @@
     </section>
   </main>
 
-  <div class="modal" id="modal">
-    <div class="modal-card">
-      <button class="close" id="closeModal" aria-label="סגור">×</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <footer>
-    <p>נבנה כאתר סטטי ל־GitHub Pages • עיצוב כהה • עברית RTL</p>
-  </footer>
-
+  <div class="modal" id="modal"><div class="modal-card"><button class="close" id="closeModal" aria-label="סגור">×</button><div id="modalContent"></div></div></div>
+  <footer><p>נבנה כאתר סטטי ל־GitHub Pages • עיצוב כהה • עברית RTL</p></footer>
   <script src="app.js"></script>
 </body>
 </html>
