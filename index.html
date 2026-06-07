@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>היסטוריה ואטימולוגיה של החיסונים</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">🧬 סל החיסונים</div>
+      <div class="navlinks">
+        <a href="#timeline">ציר זמן</a>
+        <a href="#index">אינדקס</a>
+        <a href="#etymology">אטימולוגיה</a>
+        <a href="#sources">מקורות</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">אתר מחקרי אינטראקטיבי</p>
+      <h1>ההיסטוריה והאטימולוגיה של החיסונים</h1>
+      <p>
+        מסע חזותי מן הווריאולציה הקדומה, דרך אדוארד ג׳נר,
+        ועד עידן החיסונים המודרניים: חיסונים מוחלשים, מומתים,
+        מצומדים, רקומביננטיים ו־mRNA.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#index">התחל באינדקס</a>
+        <a class="button secondary" href="#timeline">עבור לציר הזמן</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="panel intro">
+      <h2>מהו חיסון?</h2>
+      <p>
+        חיסון הוא התערבות רפואית שמטרתה ללמד את מערכת החיסון לזהות גורם מחלה
+        מראש, כך שבחשיפה עתידית הגוף יוכל להגיב מהר יותר וביעילות רבה יותר.
+      </p>
+      <div class="stats">
+        <div><strong>1796</strong><span>ניסוי ג׳נר באבעבועות שחורות</span></div>
+        <div><strong>1980</strong><span>הכחדת אבעבועות שחורות בעולם</span></div>
+        <div><strong>vacca</strong><span>שורש לטיני: פרה</span></div>
+      </div>
+    </section>
+
+    <section id="timeline" class="panel">
+      <div class="section-title">
+        <p class="eyebrow">Timeline</p>
+        <h2>ציר זמן היסטורי</h2>
+      </div>
+      <div class="timeline" id="timelineList"></div>
+    </section>
+
+    <section id="index" class="panel">
+      <div class="section-title">
+        <p class="eyebrow">Index</p>
+        <h2>אינדקס חיסונים</h2>
+      </div>
+
+      <div class="filters">
+        <button class="chip active" data-filter="all">הכול</button>
+        <button class="chip" data-filter="נגיפי">נגיפי</button>
+        <button class="chip" data-filter="חיידקי">חיידקי</button>
+        <button class="chip" data-filter="מודרני">מודרני</button>
+        <button class="chip" data-filter="היסטורי">היסטורי</button>
+      </div>
+
+      <div class="cards" id="vaccineCards"></div>
+    </section>
+
+    <section id="etymology" class="panel">
+      <div class="section-title">
+        <p class="eyebrow">Etymology</p>
+        <h2>אטימולוגיה של המונחים המרכזיים</h2>
+      </div>
+
+      <div class="etymology-grid">
+        <article>
+          <h3>Vaccine / חיסון</h3>
+          <p>
+            המונח האנגלי Vaccine נולד מן הביטוי הלטיני
+            <em>Variolae Vaccinae</em> — “אבעבועות של פרות”.
+            השורש <em>vacca</em> פירושו “פרה”.
+          </p>
+        </article>
+        <article>
+          <h3>Vaccination / התחסנות</h3>
+          <p>
+            במקור: פעולה שנועדה להגן מפני אבעבועות שחורות באמצעות חומר שמקורו
+            באבעבועות הבקר. בהמשך הורחב המונח לכל פעולה רפואית שמגרה חסינות מגינה.
+          </p>
+        </article>
+        <article>
+          <h3>Immunity / חסינות</h3>
+          <p>
+            מן הלטינית <em>immunitas</em> — פטור או הגנה. ברפואה: יכולת הגוף
+            להתגונן מפני גורם מחלה.
+          </p>
+        </article>
+        <article>
+          <h3>Variolation / וריאולציה</h3>
+          <p>
+            שיטה קדומה לחשיפה מבוקרת לחומר מאבעבועות שחורות, לפני עידן החיסון
+            של ג׳נר. היא הייתה מסוכנת יותר מחיסון מודרני.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="modal-info" class="panel">
+      <div class="section-title">
+        <p class="eyebrow">Interactive</p>
+        <h2>איך משתמשים באתר?</h2>
+      </div>
+      <p>
+        לחץ על כרטיס חיסון כדי לפתוח חלון צף עם מידע מורחב:
+        סוג החיסון, האטימולוגיה, דמות מפתח, נקודת מפנה היסטורית והקשר רפואי.
+      </p>
+    </section>
+
+    <section id="sources" class="panel sources">
+      <h2>מקורות מומלצים להמשך הרחבה</h2>
+      <ul>
+        <li>CDC — History of Smallpox</li>
+        <li>WHO — History of smallpox vaccination</li>
+        <li>WHO — Smallpox eradication</li>
+        <li>Children’s Hospital of Philadelphia — Vaccine Education Center</li>
+        <li>Merriam-Webster — Vaccine etymology</li>
+        <li>NIH / PMC — Edward Jenner and the history of vaccination</li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <button class="close" id="closeModal" aria-label="סגור">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>נבנה כאתר סטטי ל־GitHub Pages • עיצוב כהה • עברית RTL</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
